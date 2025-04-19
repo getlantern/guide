@@ -1,0 +1,28 @@
+name: Prepare Updated Document Translations
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: stable
+
+      - name: Install doc maker
+        run: |
+          git clone https://github.com/getlantern/illuminated.git
+          cd illuminated/cmd
+          go build -o ../illuminated
+
+      - name: Run doc preparation
+        run: |
+          ./illuminated init --directory docs &&
+          ./illuminated prepare --source https://github.com/getlantern/guide.wiki.git
