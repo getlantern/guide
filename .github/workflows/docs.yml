@@ -20,7 +20,7 @@ jobs:
         run: |
           git clone https://github.com/getlantern/illuminated.git
           cd illuminated/cmd
-          go build -o ../illuminated
+          go build -o ../../illuminated
 
       - name: Run doc preparation
         run: |
