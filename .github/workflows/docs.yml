@@ -1,4 +1,4 @@
-name: Prepare Updated Document Translations
+name: Prepare Document Translations
 
 on:
   workflow_dispatch:
