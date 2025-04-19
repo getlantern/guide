@@ -16,7 +16,7 @@ jobs:
         with:
           go-version: stable
 
-      - name: Install illuminated tool
+      - name: Install illuminated
         run: |
           git clone https://github.com/getlantern/illuminated.git
           cd illuminated/cmd
@@ -28,6 +28,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc
+          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
       - name: Run init and prepare
         run: |

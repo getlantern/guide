@@ -16,7 +16,7 @@ jobs:
         with:
           go-version: stable
 
-      - name: Install illuminated tool
+      - name: Install illuminated
         run: |
           git clone https://github.com/getlantern/illuminated.git
           cd illuminated/cmd
