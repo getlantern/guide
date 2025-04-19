@@ -32,5 +32,5 @@ jobs:
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Auto-update docs"
+          commit_message: "Prepare translations"
           file_pattern: docs/

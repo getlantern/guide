@@ -1,0 +1,40 @@
+name: Generate Document PDF
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: stable
+
+      - name: Install illuminated tool
+        run: |
+          git clone https://github.com/getlantern/illuminated.git
+          cd illuminated/cmd
+          go build -o ../../ill-bin
+          cd ../..
+          rm -rf illuminated
+
+      - name: Install pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      - name: Run init and prepare
+        run: |
+          ./ill-bin generate --directory docs --join --html --pdf
+
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Generate docs"
+          file_pattern: docs/
