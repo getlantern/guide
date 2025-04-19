@@ -21,6 +21,7 @@ jobs:
           git clone https://github.com/getlantern/illuminated.git
           cd illuminated/cmd
           go build -o ../../illuminated
+          cd ../..
 
       - name: Run doc preparation
         run: |
