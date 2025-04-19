@@ -22,6 +22,7 @@ jobs:
           cd illuminated/cmd
           go build -o ../../ill-bin
           cd ../..
+          rm -rf illuminated
 
       - name: Run init and prepare
         run: |
