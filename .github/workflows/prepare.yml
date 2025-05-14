@@ -26,7 +26,6 @@ jobs:
 
       - name: Run init and prepare
         run: |
-          ./ill-bin init --directory docs &&
           ./ill-bin prepare --directory docs --source https://github.com/getlantern/guide.wiki.git
 
       - name: Commit
