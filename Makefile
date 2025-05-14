@@ -4,7 +4,7 @@ all: install_illuminated install_pandoc generate_docs
 
 install_illuminated:
 	git clone https://github.com/getlantern/illuminated.git
-	cd illuminated/cmd && go build -o ../../ill-bin
+	cd illuminated/cmd && go build -o ../../illuminate
 	rm -rf illuminated
 
 install_pandoc:
