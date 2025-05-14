@@ -24,9 +24,11 @@ jobs:
           cd ../..
           rm -rf illuminated
 
-      - name: Run init and prepare
+      - name: Prepare
         run: |
-          ./ill-bin prepare --directory docs --source https://github.com/getlantern/guide.wiki.git
+          ./ill-bin prepare \
+            --directory docs \
+            --source https://github.com/getlantern/guide.wiki.git
 
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v5
