@@ -35,3 +35,4 @@ jobs:
         with:
           commit_message: "Prepare translations"
           file_pattern: docs/
+          branch: "${{ github.ref_name }}"
