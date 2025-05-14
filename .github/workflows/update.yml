@@ -1,5 +1,4 @@
-name: Prepare Document Translations
-
+name: Update source, templates, and translations
 on:
   workflow_dispatch:
 
@@ -20,13 +19,13 @@ jobs:
         run: |
           git clone https://github.com/getlantern/illuminated.git
           cd illuminated/cmd
-          go build -o ../../ill-bin
+          go build -o ../../illuminate
           cd ../..
           rm -rf illuminated
 
-      - name: Prepare
+      - name: Update source, templates, and translations
         run: |
-          ./ill-bin prepare \
+          ./illuminate update \
             --directory docs \
             --source https://github.com/getlantern/guide.wiki.git
 
@@ -36,3 +35,4 @@ jobs:
           commit_message: "Prepare translations"
           file_pattern: docs/
           branch: "${{ github.ref_name }}"
+
