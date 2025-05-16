@@ -24,7 +24,7 @@ jobs:
           cd ../..
           rm -rf illuminated
 
-      - name: Update source, templates, and translations
+      - name: Update source, templates, & tx
         run: |
           ./illuminated update \
             --directory docs \

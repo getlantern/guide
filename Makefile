@@ -4,7 +4,7 @@ all: install_illuminated install_pandoc generate_docs
 
 install_illuminated:
 	git clone https://github.com/getlantern/illuminated.git
-	cd illuminated/cmd && go build -o ../../ill-bin
+	cd illuminated/cmd && go build -o ../../illuminated
 	rm -rf illuminated
 
 install_pandoc:
@@ -13,7 +13,7 @@ install_pandoc:
 	sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
 generate_docs: install_illuminated
-	./ill-bin generate --directory docs --join --html --pdf
+	./illuminated generate --directory docs --join --html --pdf
 
 clean:
 	rm -f ill-bin
