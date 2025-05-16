@@ -1,4 +1,4 @@
-name: Update source, templates, and translations
+name: Update source, templates, & translations
 on:
   workflow_dispatch:
 
