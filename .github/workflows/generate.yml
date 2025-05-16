@@ -18,9 +18,10 @@ jobs:
 
       - name: Install illuminated
         run: |
-          git clone https://github.com/getlantern/illuminated.git
+          git clone --depth 1 \ 
+            https://github.com/getlantern/illuminated.git
           cd illuminated/cmd
-          go build -o ../../ill-bin
+          go build -o ../../illuminated
           cd ../..
           rm -rf illuminated
 
@@ -29,10 +30,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc
           sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
-
-      - name: Run init and prepare
+          
+      - name: Generate combined HTML and PDF
         run: |
-          ./ill-bin generate --directory docs --join --html --pdf
+          ./illuminated generate --directory docs --join --html --pdf
 
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v5
