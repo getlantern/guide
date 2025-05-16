@@ -16,4 +16,4 @@ generate_docs: install_illuminated
 	./illuminated generate --directory docs --join --html --pdf
 
 clean:
-	rm -f ill-bin
+	rm -f illuminated
