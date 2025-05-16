@@ -17,15 +17,16 @@ jobs:
 
       - name: Install illuminated
         run: |
-          git clone https://github.com/getlantern/illuminated.git
+          git clone --depth 1 \
+            https://github.com/getlantern/illuminated.git
           cd illuminated/cmd
-          go build -o ../../illuminate
+          go build -o ../../illuminated
           cd ../..
           rm -rf illuminated
 
-      - name: Update source, templates, and translations
+      - name: Update source, templates, & tx
         run: |
-          ./illuminate update \
+          ./illuminated update \
             --directory docs \
             --source https://github.com/getlantern/guide.wiki.git
 
