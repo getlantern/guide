@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  prepare:
+  update:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,13 +20,13 @@ jobs:
           git clone --depth 1 \
             https://github.com/getlantern/illuminated.git
           cd illuminated/cmd
-          go build -o ../../illuminated
+          go build -o ../../illuminate
           cd ../..
           rm -rf illuminated
 
       - name: Update source, templates, & tx
         run: |
-          ./illuminated update \
+          ./illuminate update \
             --directory docs \
             --source https://github.com/getlantern/guide.wiki.git
 
