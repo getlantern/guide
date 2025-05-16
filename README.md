@@ -4,7 +4,7 @@
     1. [![Update source, templates, & translations](https://github.com/getlantern/guide/actions/workflows/update.yml/badge.svg)](https://github.com/getlantern/guide/actions/workflows/update.yml)
     2. Translate (coming soon)
     3. [![Generate Document PDF](https://github.com/getlantern/guide/actions/workflows/generate.yml/badge.svg)](https://github.com/getlantern/guide/actions/workflows/generate.yml)
-3. 📖 Share the [docs](https://github.com/getlantern/guide/tree/main/docs/output)
+4. 📖 Share the [docs](https://github.com/getlantern/guide/tree/main/docs/output)
 
 ## Other Resources
 - 🌐 https://lantern.io
