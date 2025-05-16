@@ -21,9 +21,9 @@ jobs:
           git clone --depth 1 \ 
             https://github.com/getlantern/illuminated.git
           cd illuminated/cmd
-          go build -o ../../illuminated
+          go build -o ../../illuminate
           cd ../..
-          rm -rf illuminated
+          rm -rf illuminate
 
       - name: Install pandoc
         run: |
@@ -40,3 +40,4 @@ jobs:
         with:
           commit_message: "Generate docs"
           file_pattern: docs/
+          branch: "${{ github.ref_name }}"
