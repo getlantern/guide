@@ -22,7 +22,7 @@ jobs:
           cd illuminated/cmd
           go build -o ../../illuminate
           cd ../..
-          rm -rf illuminate
+          rm -rf illuminated
 
       - name: Install pandoc
         run: |
@@ -32,7 +32,7 @@ jobs:
           
       - name: Generate combined HTML and PDF
         run: |
-          ./illuminated generate --directory docs --join --html --pdf
+          ./illuminate generate --directory docs --join --html --pdf
 
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v5
