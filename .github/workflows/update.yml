@@ -18,6 +18,7 @@ jobs:
       - name: Install illuminated
         run: |
           git clone --depth 1 \
+            --branch jay/tx \  # TODO remove this after merge to just use main
             https://github.com/getlantern/illuminated.git
           cd illuminated/cmd
           go build -o ../../illuminate
