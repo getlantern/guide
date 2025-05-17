@@ -30,7 +30,7 @@ jobs:
           # noop if already initialized unless --force is set
           ./illuminate init \
             --directory docs \
-            --base en
+            --base en \
             --target en fa
   
           ./illuminate update \
