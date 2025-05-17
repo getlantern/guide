@@ -28,11 +28,12 @@ jobs:
 
       - name: Update source, templates, & tx
         run: |
+          # init & update
           # noop if already initialized unless --force is set
           ./illuminate init \
             --directory docs \
             --base en \
-            --target en fa
+            --target en,fa && \
   
           ./illuminate update \
             --directory docs \
