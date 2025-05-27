@@ -278,5 +278,65 @@ Packet capture will expose raw data for <em>all</em> traffic during the period o
 <p>While Lantern ensures that all data submitted to our <a href="#Portal">portal</a> is kept secure and fully deleted shortly after it is closed, it’s always advisable to limit the recording and transmission of personally identifying information.</p>
 </blockquote>
 
+<h2>Reset Proxy Configuration</h2>
+
+<h3>Windows</h3>
+
+<p>Some Windows applications (like WhatsApp) may have custom proxy rules that do not route through Lantern proxies. This can be solved most easily by using the web version of the application, because Lantern proxies browser traffic by default. Another option is to reset any app-specific proxy rules:
+1. Open Command Prompt or PowerShell (right click to “Run as administrator”)
+2. Run the command <code>netsh winhttp reset proxy</code>
+3. Restart your computer
+4. Open Lantern and connect</p>
+
+<h2>Install Websites as Apps (desktop)</h2>
+
+<h3>Firefox</h3>
+
+<ol>
+<li><p>Install the <a href="https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/">Progressive Web Apps for Firefox</a> extension</p></li>
+
+<li><p>Navigate to the desired site and click the <code>Install This Web App</code> button found in the URL bar after extension is installed</p></li>
+
+<li><p>Follow installation Prompts
+Official documentation can be found <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Installing">here</a></p>
+
+<h3>Chrome</h3></li>
+
+<li><p>Navigate to the desired site, and click the <code>More</code> menu on the top right of the browser</p></li>
+
+<li><p>Select <code>Cast, save, and share</code>, then <code>Install page as app</code></p></li>
+
+<li><p>Follow the installation prompts
+Official documentation can be found <a href="https://support.google.com/chrome/answer/9658361?hl=en&amp;co=GENIE.Platform%3DDesktop">here</a></p>
+
+<h3>Microsoft Edge</h3></li>
+
+<li><p>If Microsoft Edge detects that the site is eligible to be installed as an app, there will be an <code>App Available</code> icon displayed on the right side of the URL bar.</p></li>
+
+<li><p>Click the icon, and select <code>Install</code></p></li>
+
+<li><p>Follow installation prompts
+Official documentation can be found <a href="https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/ux">here</a></p>
+
+<h3>Safari (macOS Sonoma 14 or later)</h3></li>
+
+<li><p>Navigate to the desired site</p></li>
+
+<li><p>Click the <code>Share</code> button on the Safari Toolbar, and select <code>Add to Dock</code></p></li>
+
+<li><p>Follow installer prompts
+Official documentation can be found <a href="https://support.apple.com/en-us/104996">here</a></p></li>
+</ol>
+
+<h1>Using Lantern</h1>
+
+<h2>Features</h2>
+
+<h3>Split Tunneling</h3>
+
+<p>Split tunneling is a networking concept that lets users specify which apps and/or websites utilize proxies or different network routes. Since using a VPN or a proxy connection can lead to increased latency and lower overall speeds that could be obtained through normal local networks, some users prefer to only utilize these tools where they are specifically required. This enables access to content that might be otherwise blocked or restricted, while allowing the bulk of the remaining traffic to move unaffected.</p>
+
+<p>Try enabling split tunneling if you are noticing slower than ideal overall network speeds, and experiment with which apps or sites benefit the most!</p>
+
 </body>
 </html>
