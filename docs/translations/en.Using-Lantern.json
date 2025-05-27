@@ -1,0 +1,7 @@
+{
+  "key_01": "Using Lantern",
+  "key_02": "Features",
+  "key_03": "Split Tunneling",
+  "key_04": "Split tunneling is a networking concept that lets users specify which apps and/or websites utilize proxies or different network routes. Since using a VPN or a proxy connection can lead to increased latency and lower overall speeds that could be obtained through normal local networks, some users prefer to only utilize these tools where they are specifically required. This enables access to content that might be otherwise blocked or restricted, while allowing the bulk of the remaining traffic to move unaffected.",
+  "key_05": "Try enabling split tunneling if you are noticing slower than ideal overall network speeds, and experiment with which apps or sites benefit the most!"
+}
