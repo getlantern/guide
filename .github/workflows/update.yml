@@ -29,11 +29,11 @@ jobs:
 
       - name: Initialize (noop if exists unless --force)
         run: |
+          ./illuminate cleanup --force
           ./illuminate init \
             --directory docs \
             --base en \
-            --target en \
-            --force
+            --target en
 
       - name: Update source, templates, & tx
         run: |
