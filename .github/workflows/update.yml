@@ -33,7 +33,7 @@ jobs:
           ./illuminate init \
             --directory docs \
             --base en \
-            --target en
+            --target en,fa,ru,cn
 
       - name: Update source, templates, & tx
         run: |
