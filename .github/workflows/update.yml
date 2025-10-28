@@ -17,7 +17,7 @@ jobs:
         with:
           go-version: stable
 
-      - name: Install illuminated
+      - name: Install illuminated utility
         run: |
           git clone https://github.com/getlantern/illuminated.git
           cd illuminated/cmd
@@ -25,7 +25,9 @@ jobs:
           cd ../..
           rm -rf illuminated
 
-      - name: Initialize (noop if exists unless --force)
+      - name: Generate documentation
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: |
           ./illuminate generate --verbose \
             --source https://github.com/getlantern/guide.wiki.git \
