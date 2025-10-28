@@ -19,9 +19,7 @@ jobs:
 
       - name: Install illuminated
         run: |
-          git clone \
-            --branch v0.1.0 \
-            --single-branch https://github.com/getlantern/illuminated.git
+          git clone https://github.com/getlantern/illuminated.git
           cd illuminated/cmd
           go build -o ../../illuminate
           cd ../..
