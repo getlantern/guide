@@ -76,6 +76,16 @@
 
 <p>Check our <a href="https://github.com/getlantern#release-notes">release notes</a> to see which version is newest, and always ensure you’re updated to the latest version to access the latest protocols and most effective proxies.</p>
 
+<h1>Features</h1>
+
+<h2>Split Tunneling</h2>
+
+<p>Split tunneling specifies which apps and websites use proxies, and which connect directly. Because routing a VPN connection through a proxy adds some latency and speed reduction, the fastest connection will only proxy traffic that requires it. Blocked or restricted content can be routed through proxies, while the remaining traffic connects directly for the fastest speeds possible.</p>
+
+<p>Try enabling split tunneling if you are noticing slower than ideal overall network speeds, and experiment with which apps or sites benefit the most!</p>
+
+<p>see also: <a href="https://lantern.io/faq#privacy-4">https://lantern.io/faq#privacy-4</a></p>
+
 <h1>Installation</h1>
 
 <h2>Desktop</h2>
@@ -135,6 +145,7 @@ If using a web browser or Chrome to install Lantern, you will be prompted with a
 
 <ul>
 <li>Consumer Reports | Security Planner (<a href="https://securityplanner.consumerreports.org/">https://securityplanner.consumerreports.org/</a>)</li>
+<li>Miaan Digital Security Helpdesk | Assistance (<a href="https://miaan.org/projects/miaan-digital-security-helpdesk/">https://miaan.org/projects/miaan-digital-security-helpdesk/</a>)</li>
 </ul>
 
 <h2>Verify a File Download</h2>
@@ -181,105 +192,14 @@ Get-FileHash C:\file\path\my_file.exe -Algorithm SHA256
 
 <h1>Troubleshooting</h1>
 
-<p>Submit an issue report for bugs, feature requests, or connectivity problems.</p>
+<h2>Device Linking Code Email Not Delivered</h2>
 
-<h2>Application Issue Report</h2>
-
-<p>Submit an issue report from the app for best diagnostics:
-<a href="https://lantern.io/report-issue">https://lantern.io/report-issue</a></p>
-
-<p>If the link above does not work, follow the steps below to navigate to the issue submission page:</p>
-
-<h3>Desktop</h3>
-
-<ol>
-<li>go to Support</li>
-<li>select Report an Issue</li>
-<li>choose issue type</li>
-<li>include additional details</li>
-<li>send report</li>
-</ol>
-
-<h3>Android</h3>
-
-<ol>
-<li>go to Account</li>
-<li>select Support</li>
-<li>select Report Issue</li>
-<li>choose issue type</li>
-<li>include additional details</li>
-<li>hit Send Report</li>
-</ol>
-
-<h2>Other Issue Report Methods</h2>
-
-<h3>Portal</h3>
-
-<p>If an application issue report cannot be submitted, our portal may be used:
-<a href="https://support.lantern.io">https://support.lantern.io</a></p>
-
-<h3>Email</h3>
-
-<p>If other methods are not possible, email is a reliable fallback. Any message to support@lantern.io will automatically be converted into a helpdesk ticket.</p>
-
-<h2>Log Retrieval</h2>
-
-<p>Because logs are an invaluable debugging resource, the following provides a backup process for obtaining application logs when Lantern is completely blocked, and in-app issue submission is not possible. These logs can be attached to <a href="#Portal">Portal</a> or <a href="#Email">Email</a> issue reports.</p>
-
-<h3>macOS</h3>
-
-<ol>
-<li>Open <code>Terminal</code></li>
-<li>Type <code>open Library/Logs/Lantern</code> and press <code>return</code></li>
-<li>Select the newest <code>lantern.log</code> file and send in an email to support@lantern.io</li>
-</ol>
-
-<h3>Linux (Ubuntu)</h3>
-
-<ol>
-<li>Open <code>Terminal</code></li>
-<li>Type <code>open $HOME/.lantern/logs</code></li>
-<li>Select the newest <code>lantern.log</code> file</li>
-</ol>
-
-<h3>Windows</h3>
-
-<ol>
-<li>Open File Explorer and navigate to <code>Windows(C:)</code> drive</li>
-<li>Select the <code>Users</code> folder</li>
-<li>Select the user account that installed Lantern</li>
-<li>Select <code>View</code> button from the ribbon menu, hover over <code>Show</code>, select <code>Hidden items</code></li>
-<li>Navigate to the logs
-
-<ol>
-<li><code>AppData</code></li>
-<li><code>Roaming</code></li>
-<li><code>Lantern</code></li>
-<li><code>Logs</code></li>
-</ol></li>
-<li>Share this file in an email to support@lantern.io</li>
-</ol>
-
-<h3>iOS</h3>
-
-<p>iOS security settings do not permit user access to app data.</p>
-
-<h3>Android</h3>
-
-<p>Android security settings do not permit user access to app data.</p>
-
-<h2>Advanced Diagnostics</h2>
-
-<p>Problems which are difficult to diagnose with logs may require more advanced tools like packet capture.</p>
-
-<p><a href="https://www.wireshark.org/download.html">https://www.wireshark.org/download.html</a></p>
-
-<blockquote>
-<p>[!WARNING]
-Packet capture will expose raw data for <em>all</em> traffic during the period of recording. We recommend this method only for advanced users who are able to ensure that no personal data is included in the packet capture.</p>
-
-<p>While Lantern ensures that all data submitted to our <a href="#Portal">portal</a> is kept secure and fully deleted shortly after it is closed, it’s always advisable to limit the recording and transmission of personally identifying information.</p>
-</blockquote>
+<p>Some email providers (<code>@qq.com</code>, <code>@126.com</code>, <code>@163.com</code>, …) may fail to deliver device linking codes. Try changing your account email to a known reliable provider:
+- <a href="https://outlook.live.com/mail/about/index_en.html">Outlook</a>
+- <a href="https://www.icloud.com/mail">iCloud Mail</a>
+- <a href="https://mail.yahoo.com/">Yahoo Mail</a>
+- <a href="https://mail.google.com">Gmail</a>
+- <a href="https://account.proton.me/mail/signup?plan=free">Proton Mail</a> - a free, nonprofit, privacy focused email provider. In China, Proton mail require a VPN.</p>
 
 <h2>Reset Proxy Configuration</h2>
 
@@ -330,6 +250,106 @@ Official documentation can be found <a href="https://learn.microsoft.com/en-us/m
 <li><p>Follow installer prompts
 Official documentation can be found <a href="https://support.apple.com/en-us/104996">here</a></p></li>
 </ol>
+
+<h2>Submit an Issue Report</h2>
+
+<h3>Application Issue Report</h3>
+
+<p>Submit an issue report from the app for best diagnostics:
+<a href="https://lantern.io/report-issue">https://lantern.io/report-issue</a></p>
+
+<p>If the link above does not work, follow the steps below to navigate to the issue submission page:</p>
+
+<h4>Desktop</h4>
+
+<ol>
+<li>go to Support</li>
+<li>select Report an Issue</li>
+<li>choose issue type</li>
+<li>include additional details</li>
+<li>send report</li>
+</ol>
+
+<h4>Android</h4>
+
+<ol>
+<li>go to Account</li>
+<li>select Support</li>
+<li>select Report Issue</li>
+<li>choose issue type</li>
+<li>include additional details</li>
+<li>hit Send Report</li>
+</ol>
+
+<h3>Other Issue Report Methods</h3>
+
+<h4>Portal</h4>
+
+<p>If an application issue report cannot be submitted, our portal may be used:
+<a href="https://support.lantern.io">https://support.lantern.io</a></p>
+
+<h4>Email</h4>
+
+<p>If other methods are not possible, email is a reliable fallback. Any message to support@lantern.io will automatically be converted into a helpdesk ticket.</p>
+
+<h3>Log Retrieval</h3>
+
+<p>Because logs are an invaluable debugging resource, the following provides a backup process for obtaining application logs when Lantern is completely blocked, and in-app issue submission is not possible. These logs can be attached to <a href="#Portal">Portal</a> or <a href="#Email">Email</a> issue reports.</p>
+
+<h4>macOS</h4>
+
+<ol>
+<li>Open <code>Terminal</code></li>
+<li>Type <code>open Library/Logs/Lantern</code> and press <code>return</code></li>
+<li>Select the newest <code>lantern.log</code> file and send in an email to support@lantern.io</li>
+</ol>
+
+<h4>Linux (Ubuntu)</h4>
+
+<ol>
+<li>Open <code>Terminal</code></li>
+<li>Type <code>open $HOME/.lantern/logs</code></li>
+<li>Select the newest <code>lantern.log</code> file</li>
+</ol>
+
+<h4>Windows</h4>
+
+<ol>
+<li>Open File Explorer and navigate to <code>Windows(C:)</code> drive</li>
+<li>Select the <code>Users</code> folder</li>
+<li>Select the user account that installed Lantern</li>
+<li>Select <code>View</code> button from the ribbon menu, hover over <code>Show</code>, select <code>Hidden items</code></li>
+<li>Navigate to the logs
+
+<ol>
+<li><code>AppData</code></li>
+<li><code>Roaming</code></li>
+<li><code>Lantern</code></li>
+<li><code>Logs</code></li>
+</ol></li>
+<li>Share this file in an email to support@lantern.io</li>
+</ol>
+
+<h4>iOS</h4>
+
+<p>iOS security settings do not permit user access to app data.</p>
+
+<h4>Android</h4>
+
+<p>Android security settings do not permit user access to app data.</p>
+
+<h3>Advanced Diagnostics</h3>
+
+<p>Problems which are difficult to diagnose with logs may require more advanced tools like packet capture.</p>
+
+<p><a href="https://www.wireshark.org/download.html">https://www.wireshark.org/download.html</a></p>
+
+<blockquote>
+<p>[!WARNING]
+Packet capture will expose raw data for <em>all</em> traffic during the period of recording. We recommend this method only for advanced users who are able to ensure that no personal data is included in the packet capture.</p>
+
+<p>While Lantern ensures that all data submitted to our <a href="#Portal">portal</a> is kept secure and fully deleted shortly after it is closed, it’s always advisable to limit the recording and transmission of personally identifying information.</p>
+</blockquote>
 
 <h1>Using Lantern</h1>
 
