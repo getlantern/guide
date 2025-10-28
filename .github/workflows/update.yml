@@ -27,7 +27,7 @@ jobs:
 
       - name: Initialize (noop if exists unless --force)
         run: |
-          ./illuminated generate --verbose \
+          ./illuminate generate --verbose \
             --source https://github.com/getlantern/guide.wiki.git \
             --base "en" \
             --languages "en,zh,ru,fa,ar" \
