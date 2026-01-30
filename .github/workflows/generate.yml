@@ -1,4 +1,4 @@
-name: Generate Document PDF
+name: Update & Generate Document PDF
 
 on:
   workflow_dispatch:
@@ -16,26 +16,10 @@ jobs:
         with:
           go-version: stable
 
-      - name: Install illuminated
-        run: |
-          git clone \
-            --branch v0.1.0 \
-            --single-branch https://github.com/getlantern/illuminated.git
-          cd illuminated/cmd
-          go build -o ../../illuminate
-          cd ../..
-          rm -rf illuminated
-
-      - name: Install pandoc
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc
-          sudo apt-get install -y texlive-xetex
-          sudo apt-get install -y fonts-dejavu fonts-noto
-          
-      - name: Generate combined HTML and PDF
-        run: |
-          ./illuminate generate --directory docs --join --html --pdf
+      - name: Fetch new source doc, install deps, & generate docs
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: make all
 
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v5
