@@ -25,7 +25,7 @@ generate_docs: install_illuminated install_pandoc
 		--base "en" \
 		--languages "en,ru,fa,ar,zh" \
 		--translator "google" \
-		--title "User Guide" \
+		--title "Lantern VPN" \
 		--html \
 		--pdf \
 		--join \

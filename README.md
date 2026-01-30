@@ -1,6 +1,6 @@
 # Lantern User Guide
 
-Nonprofit, open source VPN
+Nonprofit, open source VPN [documentation](./docs/output)
 
 [![Update, Translate, Generate HTML + PDF](https://github.com/getlantern/guide/actions/workflows/generate.yml/badge.svg)](https://github.com/getlantern/guide/actions/workflows/generate.yml)
 
