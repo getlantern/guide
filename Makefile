@@ -23,7 +23,7 @@ generate_docs: install_illuminated install_pandoc
 	./illuminate generate --verbose \
 		--source https://github.com/getlantern/guide.wiki.git \
 		--base "en" \
-		--languages "en,ru,fa,ar" \
+		--languages "en,ru,fa,ar,zh" \
 		--translator "google" \
 		--title "User Guide" \
 		--html \
