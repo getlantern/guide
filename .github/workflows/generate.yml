@@ -17,6 +17,8 @@ jobs:
           go-version: stable
 
       - name: Fetch new source doc, install deps, & generate docs
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: make all
 
       - name: Commit
