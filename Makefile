@@ -4,8 +4,14 @@ all: install_illuminated install_pandoc generate_docs
 
 install_illuminated:
 	git clone https://github.com/getlantern/illuminated.git
-	cd illuminated && git checkout jay/size && cd cmd && go build -o ../../illuminate
-	rm -rf illuminated # delete the project directory
+	cd illuminated
+	@if ./is_current.sh illuminated; then \
+		echo "Already current, skipping build"; \
+		rm -rf illuminated; \
+	else \
+		cd illuminated/cmd && go build -o ../../illuminate; \
+		rm -rf illuminated; \
+	fi
 
 install_pandoc:
 	sudo apt-get update
