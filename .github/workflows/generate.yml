@@ -2,6 +2,8 @@ name: Update & Generate Document PDF
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '45 3 * * *'
 
 jobs:
   generate:
@@ -24,6 +26,6 @@ jobs:
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Generate docs"
+          commit_message: "automated docs generation"
           file_pattern: docs/
           branch: "${{ github.ref_name }}"
