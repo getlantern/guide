@@ -1,8 +1,0 @@
-{
-  "key_01": "Features",
-  "key_02": "Split Tunneling",
-  "key_03": "Split tunneling specifies which apps and websites use proxies, and which connect directly. Because routing a VPN connection through a proxy adds some latency and speed reduction, the fastest connection will only proxy traffic that requires it. Blocked or restricted content can be routed through proxies, while the remaining traffic connects directly for the fastest speeds possible.",
-  "key_04": "Try enabling split tunneling if you are noticing slower than ideal overall network speeds, and experiment with which apps or sites benefit the most!",
-  "key_05": "see also: ",
-  "key_06": "https://lantern.io/faq#privacy-4"
-}

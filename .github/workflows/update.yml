@@ -17,29 +17,13 @@ jobs:
         with:
           go-version: stable
 
-      - name: Install illuminated utility
-        run: |
-          git clone https://github.com/getlantern/illuminated.git
-          cd illuminated/cmd
-          go build -o ../../illuminate
-          cd ../..
-          rm -rf illuminated
+      - name: Install dependencies
+        run: make install_illuminated install_pandoc
 
-      - name: Generate documentation
+      - name: Update documentation with translations
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-        run: |
-          ./illuminate generate --verbose \
-            --source https://github.com/getlantern/guide.wiki.git \
-            --base "en" \
-            --languages "en,ru,fa,ar" \
-            --translator "google" \
-            --overrides "../overrides.yml" \
-            --title "User Guide" \
-            --html \
-            --pdf \
-            --join \
-            --force
+        run: make update_docs clean
 
       - name: Debug file changes
         run: |
