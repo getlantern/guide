@@ -439,50 +439,43 @@ Official documentation can be found <a href="https://support.apple.com/en-us/104
 
 <h3>Log Retrieval</h3>
 
-<p>Because logs are an invaluable debugging resource, the following provides a backup process for obtaining application logs when Lantern is completely blocked, and in-app issue submission is not possible. These logs can be attached to <a href="#Portal">Portal</a> or <a href="#Email">Email</a> issue reports.</p>
+<p>If you can&rsquo;t submit an issue report from within the app, you can retrieve your log file manually and email it to support@lantern.io. Version 9 stores logs in a new location, so use the section that matches your version.</p>
 
-<h4>macOS</h4>
+<h4>Version 9 (current)</h4>
 
-<ol>
-<li><p>Open <code>Terminal</code></p></li>
+<ul>
+<li><p><strong>Windows:</strong> Open File Explorer and go to <code>C:\Users\Public\Lantern\logs</code></p></li>
 
-<li><p>Type <code>open Library/Logs/Lantern</code> and press <code>return</code></p></li>
+<li><p><strong>macOS:</strong> Open Terminal, run <code>open /Users/Shared/Lantern/Logs</code></p></li>
 
-<li><p>Select the newest <code>lantern.log</code> file and send in an email to support@lantern.io</p></li>
-</ol>
+<li><p><strong>Linux:</strong> Open Terminal, run <code>xdg-open ~/.local/share/org.getlantern.lantern/logs</code></p></li>
+</ul>
 
-<h4>Linux (Ubuntu)</h4>
+<p>Select the newest <code>lantern.log</code> file and attach it to an email to support@lantern.io.</p>
 
-<ol>
-<li><p>Open <code>Terminal</code></p></li>
+<p><strong>Advanced: VPN service log (Windows and Linux only)</strong></p>
 
-<li><p>Type <code>open $HOME/.lantern/logs</code></p></li>
+<p>On Windows and Linux, Lantern runs a separate background service that handles the VPN connection itself, and it keeps its own log apart from the main app. Support may ask for this log to diagnose connection or &ldquo;no traffic&rdquo; problems.</p>
 
-<li><p>Select the newest <code>lantern.log</code> file</p></li>
-</ol>
+<ul>
+<li><p><strong>Windows:</strong> Open File Explorer, paste <code>C:\ProgramData\Lantern</code> into the address bar, and press Enter (this folder is hidden by default)</p></li>
 
-<h4>Windows</h4>
+<li><p><strong>Linux:</strong> Open Terminal, run <code>xdg-open /var/log/lantern</code></p></li>
+</ul>
 
-<ol>
-<li><p>Open File Explorer and navigate to <code>Windows(C:)</code> drive</p></li>
+<p>Attach the newest <code>lantern.log</code> from that folder in addition to the log above.</p>
 
-<li><p>Select the <code>Users</code> folder</p></li>
+<h4>Legacy (before Version 9)</h4>
 
-<li><p>Select the user account that installed Lantern</p></li>
+<ul>
+<li><p><strong>Windows:</strong> In File Explorer, enable hidden items (View menu), then go to <code>C:\Users\&lt;username&gt;\AppData\Roaming\Lantern\Logs</code></p></li>
 
-<li><p>Select <code>View</code> button from the ribbon menu, hover over <code>Show</code>, select <code>Hidden items</code></p></li>
+<li><p><strong>macOS:</strong> Open Terminal, run <code>open ~/Library/Logs/Lantern</code></p></li>
 
-<li><p>Navigate to the logs</p>
+<li><p><strong>Linux:</strong> Open Terminal, run <code>xdg-open ~/.lantern/logs</code></p></li>
+</ul>
 
-<ol>
-<li><code>AppData</code></li>
-<li><code>Roaming</code></li>
-<li><code>Lantern</code></li>
-<li><code>Logs</code></li>
-</ol></li>
-
-<li><p>Share this file in an email to support@lantern.io</p></li>
-</ol>
+<p>Select the newest <code>lantern.log</code> file and send it to support@lantern.io.</p>
 
 <h4>iOS</h4>
 
